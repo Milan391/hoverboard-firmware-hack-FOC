@@ -1,0 +1,29 @@
+name: Build Hoverboard Firmware
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install ARM GCC Toolchain and Make
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi make
+
+      - name: Compile Firmware
+        run: |
+          make
+
+      - name: Upload Binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: hoverboard-firmware-bin
+          path: build/*.bin
