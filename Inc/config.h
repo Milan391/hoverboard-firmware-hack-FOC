@@ -197,7 +197,7 @@
 #define DEFAULT_RATE                480   // 30.0f [-] lower value == slower rate [0, 32767] = [0.0, 2047.9375]. Do NOT make rate negative (>32767)
 #define DEFAULT_FILTER              6553  // Default for FILTER 0.1f [-] lower value == softer filter [0, 65535] = [0.0 - 1.0].
 #define DEFAULT_SPEED_COEFFICIENT   16384 // Default for SPEED_COEFFICIENT 1.0f [-] higher value == stronger. [0, 65535] = [-2.0 - 2.0]. In this case 16384 = 1.0 * 2^14
-#define DEFAULT_STEER_COEFFICIENT   8192  // Defualt for STEER_COEFFICIENT 0.5f [-] higher value == stronger. [0, 65535] = [-2.0 - 2.0]. In this case  8192 = 0.5 * 2^14. If you do not want any steering, set it to 0.
+#define DEFAULT_STEER_COEFFICIENT   2048  // Defualt for STEER_COEFFICIENT 0.5f [-] higher value == stronger. [0, 65535] = [-2.0 - 2.0]. In this case  8192 = 0.5 * 2^14. If you do not want any steering, set it to 0.
 // ######################### END OF DEFAULT SETTINGS ##########################
 
 
@@ -298,8 +298,8 @@
   #define CONTROL_ADC           0         // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
 
   // #define DUAL_INPUTS                     //  ADC*(Primary) + UART(Auxiliary). Uncomment this to use Dual-inputs
-  #define PRI_INPUT1            2, 0, 2047, 4095, 50      // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
-  #define PRI_INPUT2            2, 0, 2047, 4095, 50      // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
+  #define PRI_INPUT1            2, 0, 2047, 4095, 150      // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
+  #define PRI_INPUT2            2, 0, 2047, 4095, 150      // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
   #ifdef DUAL_INPUTS
     #define FLASH_WRITE_KEY     0x1101    // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
     // #define SIDEBOARD_SERIAL_USART3 1
