@@ -301,9 +301,9 @@ P rtP_Left = {
   1229U,
 
   /* Variable: cf_nKp
-   * Referenced by: '<S61>/cf_nKp'
+   * Referenced by: '<S61>/cf_nKp' bylo  4833U,
    */
-  4833U,
+  3500U,
 
   /* Variable: cf_currFilt
    * Referenced by: '<S50>/cf_currFilt'
@@ -328,9 +328,9 @@ P rtP_Left = {
   737U,
 
   /* Variable: cf_nKi
-   * Referenced by: '<S61>/cf_nKi'
+   * Referenced by: '<S61>/cf_nKi' bylo 251U,
    */
-  251U,
+  200U,
 
   /* Variable: cf_nKiLimProt
    * Referenced by:
